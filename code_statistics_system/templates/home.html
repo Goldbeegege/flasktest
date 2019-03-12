@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+
+{%block table%}
+<table border="1">
+        <thead>
+            <tr>
+                <th>时间</th>
+                <th>行数</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for line in codes%}
+            <tr>
+                <td>{{line["date"]}}</td>
+                <td>{{line["line"]}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+{%endblock%}
